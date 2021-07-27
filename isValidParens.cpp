@@ -52,6 +52,10 @@ public:
             }
         }
 
+        if (!inchar.empty()) {
+            return false;
+        }
+
         return true;
     }
 };
@@ -66,4 +70,7 @@ int main() {
 
     std::string test3{"{[]}"};
     std::cout << std::boolalpha << (solution.isValid(test3) == true) << std::endl;
+
+    std::string test4{"["};
+    std::cout << std::boolalpha << (solution.isValid(test4) == false) << std::endl;
 }
